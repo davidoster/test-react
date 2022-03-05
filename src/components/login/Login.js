@@ -14,14 +14,14 @@ class LoginForm extends React.Component {
     }
 
     render() {
-        if(this.props.b.someBool) {
-            return (<div a={this.props.b}/>);
+        if(this.props.props.b.someBool) {
+            return (<div a={this.props.props.b}/>);
         } else {
             return (
-                <form id={this.props.form.id} method={this.props.form.method} action={this.props.form.action} >
-                    <GenericInput a={this.props.input1} b={this.props.b} /> 
-                    <GenericInput a={this.props.input2} />
-                    <Button a={this.props.button} inputs={this.props.input1.id}/>    
+                <form id={this.props.props.form.id} method={this.props.props.form.method} action={this.props.props.form.action} >
+                    <GenericInput a={this.props.props.input1} b={this.props.props.b} /> 
+                    <GenericInput a={this.props.props.input2} />
+                    <Button a={this.props.props.button} inputs={{id1: this.props.props.input1.id, id2: this.props.props.input2.id}}/>    
                 </form>
             );
         }

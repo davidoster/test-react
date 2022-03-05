@@ -6,15 +6,12 @@ class Button extends React.Component {
       this.state = { liked: false };
     }
   
-    submit(event) {
+    submit = ((event) => {
       event.preventDefault();
-      console.log(this);
-      // console.log(this.props.inputIds().id1);
-      // let username = document.getElementById(this.getState.username);
-      // let password = document.getElementById("password");
-      // alert(username.value);
-      // alert(password.value);
-    }
+      let username = document.getElementById(this.props.inputs.id1).value;
+      let password = document.getElementById(this.props.inputs.id2).value;
+      console.log(username, password);
+    });
   
     render() {
       return (

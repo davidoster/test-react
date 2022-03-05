@@ -10,7 +10,11 @@ class Button extends React.Component {
       event.preventDefault();
       let username = document.getElementById(this.props.inputs.id1).value;
       let password = document.getElementById(this.props.inputs.id2).value;
-      console.log(username, password);
+      if(username == "user" && password == "password") {
+        console.log(username, password);
+      } else {
+          console.log("Get out of here");
+      }
     });
   
     render() {
